@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    margin-bottom: 16px;
+    color: linen
+}
+
+body {
+    background: linear-gradient(to bottom right, #DB0B5F 0%, #6F00ED 100%);
+    background-repeat: no repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background-color: whitesmoke;
+    border-radius: 7%;
+    padding: 20px;
+    position: relative;
+
+}
+
+.container input {
+    z-index: -10;
+    position: absolute;
+    opacity: 0;
+}
+
+#pg {
+    /* background-color: rgb(253, 243, 243); */
+    color: grey;
+    padding: 3px;
+    letter-spacing: 1px;
+    text-align: justify;
+
+}
+
+/* #pg::selection {
+    background-color: #f3818e;
+    color: black
+} */
+#pg span{
+    position: relative;
+}
+#pg span.active::before{
+    position: absolute;
+    content:'';
+    height: 2px;
+    background-color: #45c53a;
+    width: 100%;
+    bottom: 0;
+    left:0;
+    opacity: 0;
+    animation: blink 1s ease-in-out infinite;
+    
+}
+#pg span.correct{
+    color:green
+}
+#pg span.incorrect{
+    color:red
+}
+.container-in {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    background-color: #252525;
+    padding: 10px;
+    border-radius: 16%;
+}
+
+.result {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+    width: 80%;
+    padding: 5px;
+}
+
+.result .txt1 {
+    font-size: 16px;
+}
+
+.result .txt2 {
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #33ccff;
+    width: 50px;
+    border-radius: 34%;
+    padding: 5px;
+    text-align: center;
+    min-width: 50px;
+    margin-left: 5px;
+}
+
+.result div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-in button {
+    background-color: #f23fc3;
+    color: white;
+    border: none;
+    padding: 14px 14px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10%;
+}
+
+@keyframes blink{
+    50%{
+        opacity:1;
+    }
+}
